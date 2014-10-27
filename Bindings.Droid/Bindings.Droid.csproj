@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B7748ADC-59AE-4800-9DEA-91CE95C64D43}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -13,6 +11,7 @@
     <AssemblyName>Cheesebaron.MvvmCross.Bindings.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,30 +30,45 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
-    <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BindableViewPager.cs" />
@@ -68,4 +83,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>

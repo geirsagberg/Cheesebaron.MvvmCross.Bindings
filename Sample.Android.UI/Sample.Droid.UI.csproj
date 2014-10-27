@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A40394C0-035F-4BE3-977A-8C6E3B421112}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -16,9 +14,9 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
-    <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,7 +26,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -39,58 +36,52 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.CrossCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
-    <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Droid\System.Net.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows">
-      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\System.Windows.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>..\packages\MvvmCross.PortableSupport.3.2.1\lib\MonoAndroid\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Setup.cs" />
@@ -111,6 +102,7 @@
     <AndroidResource Include="Resources\Layout\SimpleViewPagerItem.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -124,11 +116,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bindings.Droid\Bindings.Droid.csproj">
-      <Project>{b7748adc-59ae-4800-9dea-91ce95c64d43}</Project>
+      <Project>{B7748ADC-59AE-4800-9DEA-91CE95C64D43}</Project>
       <Name>Bindings.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sample.Core\Sample.Core.csproj">
-      <Project>{4c312177-0814-40f8-adbc-6a0f0c92fd86}</Project>
+      <Project>{4C312177-0814-40F8-ADBC-6A0F0C92FD86}</Project>
       <Name>Sample.Core</Name>
     </ProjectReference>
   </ItemGroup>
